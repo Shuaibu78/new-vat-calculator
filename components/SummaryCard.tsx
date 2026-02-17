@@ -57,7 +57,7 @@ export function SummaryCard({
     <div
       className={`relative overflow-hidden rounded-lg border-2 ${styles.container} p-6 shadow-sm transition-all hover:shadow-md`}
     >
-      <div className="flex items-start justify-between">
+      <div className="flex items-start justify-between gap-1">
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-1">
             <p className={`text-sm font-medium ${styles.title}`}>{title}</p>
@@ -71,11 +71,13 @@ export function SummaryCard({
             {formatCurrency(amount)}
           </p>
           {description && (
-            <p className="mt-2 text-xs text-slate-500 leading-relaxed">{description}</p>
+            <p className="mt-2 text-xs text-slate-500 leading-relaxed">
+              {description}
+            </p>
           )}
         </div>
-        <div className={`flex-shrink-0 rounded-lg ${styles.icon} p-3`}>
-          <Icon className="h-6 w-6" />
+        <div className={`shrink-0 rounded-lg ${styles.icon} p-3`}>
+          <Icon className="h-4 w-4" />
         </div>
       </div>
     </div>
